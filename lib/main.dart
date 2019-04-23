@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_flutter/HomePage/HomePage.dart';
 import 'package:hello_flutter/Mine/Mine.dart';
 import 'package:hello_flutter/ShoppingCart/ShoppingCart.dart';
+//import 'package:hello_flutter/GoodsDetail/GoodsDetail.dart';
 
 void main() => runApp(App());
 
@@ -16,6 +17,9 @@ class App extends StatelessWidget{
         primarySwatch: Colors.orange,
       ),
       home: new MyApp(),
+//      routes: <String, WidgetBuilder> {
+//        '/gd': (BuildContext context) => GoodsDetail(),
+//      },
     );
   }
 
@@ -55,6 +59,7 @@ class MyAppState extends State<MyApp> {
 
   //
   List getBottomBarItems(List textIcon){
+
       var newList =  <BottomNavigationBarItem>[];
       for (List ti in textIcon){
           newList.add(BottomNavigationBarItem(icon: ti[1], title: Text(ti[0])));
